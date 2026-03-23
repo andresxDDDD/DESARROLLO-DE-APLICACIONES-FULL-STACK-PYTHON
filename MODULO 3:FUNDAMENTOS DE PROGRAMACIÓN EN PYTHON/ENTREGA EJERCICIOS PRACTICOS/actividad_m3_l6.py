@@ -30,7 +30,7 @@
 #ejercicio 2: Realizar un programa que lea por teclado las 5 notas obtenidas por un alumno (comprendidas entre
 #0 y 10). A continuación, debe mostrar todas las notas, la nota media, la nota más alta que ha sacado
 #y la menor.
-import os
+""" import os
 def limpiar_pantalla():
      os.system('cls' if os.name == 'nt' else 'clear') 
 notas= []   
@@ -51,18 +51,27 @@ while True:
     
     
     if opcion ==1:
-        limpiar_pantalla()
-        for i in range(5):
-            nota= int(input("Ingrese Nota:"))
-            if nota >= 0 and nota <= 10 :
-                 notas.append(nota)
-            else:
-                 print("ingrese una nota entre 0 y 10. la nota no ha sido grabada ")
-    
+      
+      limpiar_pantalla()
+      if len(notas) < 5:
+          for i in range(5):
+                    if len(notas) >= 0 and len(notas)<5:
+                              nota= int(input("Ingrese Nota:"))
+                              if nota >= 0 and nota <= 10 :
+                               notas.append(nota)
+                              else:
+                                   print("ingrese una nota entre 0 y 10. la nota no ha sido grabada ")
+      else:              
+           print("notas ya ingresadas")      
+     
+                                  
+     
+            
             
     elif opcion ==2:
             limpiar_pantalla()
-            if len(notas) > 0 and len(notas)==5:
+            if len(notas) > 0 and len(notas)>=5:
+          
                  print(notas)
             else:
                  print("No hay notas disponibles o faltan notas")
@@ -92,8 +101,22 @@ while True:
         limpiar_pantalla()
         print("Ingresa una opcion valida")
     elif opcion == 6: 
-         break
-         
-         
-        
-                         
+         break                         """
+
+#ejercicio3: Crea un programa que pida un número al usuario un número de mes (por ejemplo, el 4) y diga 
+#cuántos días tiene (por ejemplo, 30) y el nombre del mes. Debes usar listas. Para simplificarlo vamos 
+#a suponer que febrero tiene 28 días. 
+
+
+""" meses = [{"mes":1,"nombre":"Enero","dias": 31},{"mes":2,"nombre":"Febrero","dias":28},{"mes":3,"nombre":"Marzo","dias":31}
+         ,{"mes":4,"nombre":"Abril","dias":30},{"mes":5,"nombre":"Mayo","dias":31}
+         ,{"mes":6,"nombre":"Junio","dias":30},{"mes":7,"nombre":"Julio","dias":31}
+         ,{"mes":8,"nombre":"Agosto","dias":31},{"mes":9,"nombre":"Septiembre","dias":30},
+         {"mes":10,"nombre":"Octubre","dias":31},{"mes":11,"nombre":"Noviembre","dias":30},{"mes":12,"nombre":"Diciembre","dias":31}]
+    
+opcion= int(input("Ingrese un numero de mes:"))
+
+for i in meses:
+    if i["mes"]== opcion:
+        print(f"El mes {i['nombre']} tiene {i['dias']} días.")
+         """
