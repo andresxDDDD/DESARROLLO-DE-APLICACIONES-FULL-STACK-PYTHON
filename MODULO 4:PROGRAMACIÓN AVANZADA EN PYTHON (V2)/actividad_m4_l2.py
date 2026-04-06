@@ -51,12 +51,19 @@ class Libro:
     
     def set_anio_publicacion(self,nuevo_anio):        
            self.__anio_publicacion= nuevo_anio
-         
+
+    def resumen(self,resumen= None): #3. Sobrecarga de métodos      
+      if resumen:
+            print(f"Resumen de '{self.__titulo}': {resumen}")
+      else:
+            print("Libro sin resumen disponible")    
 
 
 libro1 = Libro("Papelucho y el marciano","Marcela paz",1968) 
 print(libro1)
-libro1.set_titulo("Hola") 
+libro1.set_titulo("Dragon Ball") 
 libro1.set_anio_publicacion(2026)
 print(f"Nuevo título : {libro1.get_titulo()}")
 print(f"Nuevo año: {libro1.get_anio_publicacion()}")
+libro1.resumen("Dragon ball")
+
