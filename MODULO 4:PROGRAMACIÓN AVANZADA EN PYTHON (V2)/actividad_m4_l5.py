@@ -29,13 +29,13 @@ except ZeroDivisionError:
 #es menor que 0.
 #Define esta excepción como clase hija de Exception.
 
-class EdadInvalidaError(Exception):
+""" class EdadInvalidaError(Exception):
  
- pass 
+  pass 
 
 def validar_edad(edad):
         if edad < 0:
-         raise EdadInvalidaError(f"La edad no puede ser negativa:")
+         raise EdadInvalidaError("La edad no puede ser menor que 0:")
         else:
             print(f"La edad es correcta")   
 
@@ -44,7 +44,24 @@ try:
  validar_edad(edad)
 
 except ValueError:
-   print(f"Por favor ingresar solo numeros") 
+   print(f"Por favor ingresar solo numeros")  """
+
+
+
     
- 
-            
+# 4. Limpieza de recursos
+#• Simula la apertura de un archivo (puede ser un print("Abriendo archivo...")) y utiliza 
+#finally para imprimir "Cerrando archivo..." aunque haya ocurrido un error.
+
+""" 
+print("======Probando finally=====")
+try:
+    msj= int(input("ingrese un numero: "))
+    print(f"ingreso correcto-----> Guardando numero en archivo")
+
+
+except ValueError:
+    print("Por favor ingresar solo numeros")
+finally:
+   print("Cerrando archivo")
+ """
